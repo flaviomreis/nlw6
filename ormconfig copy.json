@@ -1,0 +1,12 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "nlw6",
+  "password": "nlw6",
+  "database": "nlw6",
+  "migrations": "src/database/migrations/*.ts",
+  "cli": {
+    "migrationsDir": "src/database/migrations"
+  }
+}

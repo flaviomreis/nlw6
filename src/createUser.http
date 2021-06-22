@@ -1,0 +1,9 @@
+###
+POST  http://localhost:3000/users
+content-type: application/json
+
+{
+  "name": "Flávio Menezes dos Reis",
+  "email": "flavio-reis@pge.rs.gov.br",
+  "admin": true
+}
