@@ -4,6 +4,7 @@ import 'express-async-errors';
 
 import { router } from './routes';
 import './database';
+import { HttpStatus } from './errors/HttpStatus';
 
 const app = express();
 
@@ -11,8 +12,12 @@ app.use(express.json());
 
 app.use(router);
 
-app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
-  if (error instanceof Error) {
+app.use((error: any, request: Request, response: Response, next: NextFunction) => {
+if (error instanceof HttpStatus) {
+    return response.status(error.code).json({
+      error: error.message
+    });
+  } else if (error instanceof Error) {
     return response.status(400).json({
       error: error.message
     });

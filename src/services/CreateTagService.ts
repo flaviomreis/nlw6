@@ -1,4 +1,5 @@
 import { getCustomRepository } from "typeorm";
+import { HttpStatus } from "../errors/HttpStatus";
 import { TagRepository } from "../repositories/TagRepository";
 
 interface ITagRequest {
@@ -10,7 +11,7 @@ export class CreateTagService {
     const tagRepository = getCustomRepository(TagRepository);
 
     if (! name) {
-      throw new Error('Name cannot be empty.');
+      throw new HttpStatus('Name cannot be empty.', 400);
     }
 
     const foundByName = await tagRepository.findOne({
@@ -18,7 +19,7 @@ export class CreateTagService {
     });
 
     if (foundByName) {
-      throw new Error('Tag already exists.');
+      throw new HttpStatus('Tag already exists.', 400);
     }
 
     const tag = tagRepository.create({

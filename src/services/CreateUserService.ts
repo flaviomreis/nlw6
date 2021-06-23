@@ -1,4 +1,5 @@
 import { getCustomRepository } from "typeorm";
+import { HttpStatus } from "../errors/HttpStatus";
 import { UserRepository } from "../repositories/UserRepository";
 
 interface IUserRequest {
@@ -12,11 +13,11 @@ export class CreateUserService {
     const userRepository = getCustomRepository(UserRepository);
 
     if (! email) {
-      throw new Error('Email cannot be empty.')
+      throw new HttpStatus('Email cannot be empty.', 400)
     }
 
     if (! name) {
-      throw new Error('Name cannot be empty');
+      throw new HttpStatus('Name cannot be empty', 400);
     }
 
     const foundByEmail = await userRepository.findOne({
@@ -24,7 +25,7 @@ export class CreateUserService {
     });
 
     if (foundByEmail) {
-      throw new Error('User already exists with this email.');
+      throw new HttpStatus('User already exists with this email.', 400);
     }
 
     const user = userRepository.create({
