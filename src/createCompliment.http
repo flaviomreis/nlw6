@@ -1,0 +1,10 @@
+###
+POST  http://localhost:3000/compliments
+content-type: application/json
+
+{
+  "user_sender_id": "56243d4b-40f1-4dab-a541-96666e92d75e",
+  "user_receiver_id": "d88b1602-6964-4114-8a5e-5c93fd29135f",
+  "tag_id": "4aae55c1-8988-4a84-a777-503e24faa0aa",
+  "message": "Usuário0 é um cara muito feliz."
+}
