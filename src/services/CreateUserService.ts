@@ -1,15 +1,18 @@
+import { hash } from "bcryptjs";
 import { getCustomRepository } from "typeorm";
 import { HttpStatus } from "../errors/HttpStatus";
 import { UserRepository } from "../repositories/UserRepository";
+import { Crypt } from "../utils/Crypt";
 
 interface IUserRequest {
   name: string;
   email: string;
   admin?: boolean;
+  password: string;
 }
 
 export class CreateUserService {
-  async execute( { name, email, admin }: IUserRequest) {
+  async execute( { name, email, admin = false, password }: IUserRequest) {
     const userRepository = getCustomRepository(UserRepository);
 
     if (! email) {
@@ -28,10 +31,13 @@ export class CreateUserService {
       throw new HttpStatus('User already exists with this email.', 400);
     }
 
+    const passwordHash = await Crypt.crypt(password);
+
     const user = userRepository.create({
       name,
       email,
-      admin
+      admin,
+      password: passwordHash
     });
 
     await userRepository.save(user);
