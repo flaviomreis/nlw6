@@ -3,8 +3,8 @@ POST  http://localhost:3000/compliments
 content-type: application/json
 
 {
-  "user_sender_id": "56243d4b-40f1-4dab-a541-96666e92d75e",
-  "user_receiver_id": "d88b1602-6964-4114-8a5e-5c93fd29135f",
-  "tag_id": "4aae55c1-8988-4a84-a777-503e24faa0aa",
+  "user_sender_id": "94fbf3e3-15d2-45a8-be20-387c06696018",
+  "user_receiver_id": "d2cf022d-64c1-4fcb-a9d9-1db2a8681681",
+  "tag_id": "270973df-9898-465a-af53-838a11aa8f2c",
   "message": "Usuário0 é um cara muito feliz."
 }
