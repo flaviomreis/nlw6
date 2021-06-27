@@ -1,0 +1,9 @@
+###
+GET  http://localhost:3000/user/compliments/received
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW8wQGYxOHMuZjlzIiwiaWF0IjoxNjI0NzYwODYwLCJleHAiOjE2MjQ4NDcyNjAsInN1YiI6ImQyY2YwMjJkLTY0YzEtNGZjYi1hOWQ5LTFkYjJhODY4MTY4MSJ9.MKXMurRDjeGPATZJ-1C-MALXHwF1u-_sAPrx7n47KZs
+
+###
+GET  http://localhost:3000/user/compliments/sended
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW8wQGYxOHMuZjlzIiwiaWF0IjoxNjI0NzYwODYwLCJleHAiOjE2MjQ4NDcyNjAsInN1YiI6ImQyY2YwMjJkLTY0YzEtNGZjYi1hOWQ5LTFkYjJhODY4MTY4MSJ9.MKXMurRDjeGPATZJ-1C-MALXHwF1u-_sAPrx7n47KZs

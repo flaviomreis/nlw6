@@ -51,3 +51,15 @@ content-type: application/json
   "email": "usuario2@f18s.f9s",
   "password": "secreto"
 }
+
+###
+POST  http://localhost:3000/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZsYXZpby1yZWlzQHBnZS5ycy5nb3YuYnIiLCJpYXQiOjE2MjQ3Njc5NjksImV4cCI6MTYyNDg1NDM2OSwic3ViIjoiZDM1NWVjYjktN2E2MS00NzRlLWFiNTItYzZkYzY4ODBhMWU4In0.iy4myW-vS8Jw2clymWpIIxljGMGSNSFuqPejtpykH4k
+
+{
+  "name": "usuario3",
+  "email": "usuario3@f18s.f9s",
+  "admin": true,
+  "password": "secreto"
+}
