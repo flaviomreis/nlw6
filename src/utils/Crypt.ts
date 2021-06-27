@@ -1,5 +1,5 @@
 import { compare, hash } from "bcryptjs";
-import { sign, SignOptions } from "jsonwebtoken";
+import { JwtPayload, sign, SignOptions, verify } from "jsonwebtoken";
 
 export class Crypt {
 
@@ -15,11 +15,22 @@ export class Crypt {
     const isEqual = compare(value, hashValue);
 
     return isEqual;
-  }
+  } 
 
   static sign(payload: object, options: SignOptions): string {
     const token = sign(payload, Crypt.JWT_KEY, options);
 
     return token;
+  }
+
+  static verify(token: string): string | JwtPayload {
+    try {
+      const tokenData = verify(token, Crypt.JWT_KEY);
+
+      return tokenData;
+
+    } catch (error) {
+      return null;
+    }
   }
 }

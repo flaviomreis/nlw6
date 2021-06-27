@@ -8,3 +8,14 @@ content-type: application/json
   "tag_id": "4aae55c1-8988-4a84-a777-503e24faa0aa",
   "message": "Usuário0 é um cara muito feliz."
 }
+
+###
+POST  http://localhost:3000/compliments
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW8wQGYxOHMuZjlzIiwiaWF0IjoxNjI0NzYwODYwLCJleHAiOjE2MjQ4NDcyNjAsInN1YiI6ImQyY2YwMjJkLTY0YzEtNGZjYi1hOWQ5LTFkYjJhODY4MTY4MSJ9.MKXMurRDjeGPATZJ-1C-MALXHwF1u-_sAPrx7n47KZs
+
+{
+  "user_receiver_id": "d355ecb9-7a61-474e-ab52-c6dc6880a1e8",
+  "tag_id": "6ffdff5d-444a-453c-8c5d-34db60b59303",
+  "message": "Flávio é um cara calmo."
+}
