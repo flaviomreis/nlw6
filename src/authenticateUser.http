@@ -6,3 +6,12 @@ content-type: application/json
   "email": "usuario0@f18s.f9s",
   "password": "secreto"
 }
+
+###
+POST  http://localhost:3000/login
+content-type: application/json
+
+{
+  "email": "flavio-reis@pge.rs.gov.br",
+  "password": "secreto"
+}

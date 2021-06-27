@@ -3,5 +3,24 @@ POST  http://localhost:3000/tags
 content-type: application/json
 
 {
+  "name": "cool"
+}
+
+###
+POST  http://localhost:3000/tags
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZsYXZpby1yZWlzQHBnZS5ycy5nb3YuYnIiLCJpYXQiOjE2MjQ3NjAwMjcsImV4cCI6MTYyNDg0NjQyNywic3ViIjoiZDM1NWVjYjktN2E2MS00NzRlLWFiNTItYzZkYzY4ODBhMWU4In0.SVnMGqO-OP2wqVOR-EOTM_RG0HcX3awFwkQu09vhgNc
+
+{
   "name": "happy"
+}
+
+
+###
+POST  http://localhost:3000/tags
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZsYXZpby1yZWlzQHBnZS5ycy5nb3YuYnIiLCJpYXQiOjE2MjQ3NjAwMjcsImV4cCI6MTYyNDg0NjQyNywic3ViIjoiZDM1NWVjYjktN2E2MS00NzRlLWFiNTItYzZkYzY4ODBhMWU4In0.SVnMGqO-OP2wqVOR-EOTM_RG0HcX3awFwkQu09vhgNc
+
+{
+  "name": "calm"
 }
